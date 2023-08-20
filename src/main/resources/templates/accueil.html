@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion de Régulation d'Impôts</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-image: url('../images/impot.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #007bff;
+    }
+
+    .navbar-brand {
+      color: white;
+      font-size: 24px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: white;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+
+    .btn-outline-primary {
+      color: white;
+      border-color: white;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: white;
+      color: #007bff;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .social-icon {
+      font-size: 30px;;
+      margin: 0 10px;
+      color: #333;
+    }
+
+    .social-icon:hover {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img th:src="@{/images/Sénégal.jpg}" alt="Logo" width="100" height="50">
+      Système de Régulation d'Impôts
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/Paiement/liste}">
+            <button class="btn btn-outline-primary">
+              <i class="fas fa-credit-card"></i> Gestion des Paiements
+            </button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/Declaration/liste}">
+            <button class="btn btn-outline-primary">
+              <i class="far fa-file-alt"></i> Gestion des Déclarations
+            </button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/Declarant/liste}">
+            <button class="btn btn-outline-primary">
+              <i class="fas fa-users"></i> Gestion des Déclarants
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <main>
+    <section class="text-center" th:style="'color: dark;'"><br>
+      <h1><marquee>Bienvenue dans le Système de Régulation d'Impôts</marquee></h1><br>
+      <h2>Gérez facilement vos paiements, déclarations et déclarants.</h2>
+    </section>
+  </main>
+</div>
+
+<footer class="footer" th:style="'color:dark;'">
+  <div class="container">
+    <p>&copy; 2023 Système de Régulation d'Impôts</p>
+    <div>
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
